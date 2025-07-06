@@ -1,0 +1,139 @@
+/* Larger screens (e.g., Tablets and Desktops) */
+/* This media query applies styles when the viewport is at least 768px wide */
+@media (min-width: 768px) {
+    /* --- Header Styling --- */
+    header {
+        padding: 15px 30px; /* More padding for larger screens */
+    }
+
+    .header-content {
+        max-width: 1200px; /* Constrain content width */
+    }
+
+    .site-branding {
+        font-size: 1.5em; /* Larger font for site name */
+    }
+
+    .site-logo {
+        height: 45px; /* Larger logo */
+    }
+
+    /* Hide hamburger menu on larger screens */
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Show horizontal navigation for larger screens */
+    .main-nav {
+        position: static; /* Remove absolute positioning */
+        display: block; /* Show the nav */
+        background: none; /* No background */
+        box-shadow: none; /* No shadow */
+        padding: 0;
+        z-index: auto;
+    }
+
+    .main-nav ul {
+        display: flex; /* Arrange nav items horizontally using Flexbox */
+        justify-content: flex-end; /* Push nav items to the right */
+    }
+
+    .main-nav li {
+        width: auto; /* Allow list items to take natural width */
+        margin-left: 30px; /* Space between nav items */
+    }
+
+    .main-nav a {
+        padding: 5px 0; /* Adjust padding for horizontal links */
+        border-bottom: none; /* Remove separator lines */
+        font-weight: 600;
+        color: var(--secondary-color); /* Dark blue for nav links */
+        position: relative; /* For the underline effect */
+    }
+
+    /* Underline effect for nav links */
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease-in-out;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+        width: 100%;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+        background-color: transparent; /* Remove background on hover/active for desktop */
+        color: var(--primary-color); /* Change text color to green on hover/active */
+    }
+
+    /* --- Main Content Area --- */
+    main {
+        padding: 40px 30px; /* More padding for main content sections */
+    }
+
+    main section {
+        padding: 30px; /* More padding inside sections */
+    }
+
+    main section h2 {
+        font-size: 2em; /* Larger section headings */
+    }
+
+    /* About Me Section (Desktop - two columns) */
+    .about-me-section {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Text on left (2 parts), Photo on right (1 part) */
+        gap: 30px; /* Space between columns */
+        text-align: left; /* Align text to left */
+        align-items: start; /* Align items to the top of their cells */
+    }
+
+    .student-photo-placeholder {
+        width: 200px; /* Larger photo */
+        height: 200px;
+        margin: 0; /* Remove auto margin to align within grid */
+        justify-self: center; /* Align photo to the end of its column */
+    }
+
+    /* Courses Section (Desktop - grid for cards) */
+    .courses-section h2 {
+        text-align: left; /* Align courses heading to left */
+    }
+
+    .filter-buttons {
+        justify-content: flex-start; /* Align filter buttons to the left */
+    }
+
+    .course-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2-3 columns for courses */
+        gap: 20px;
+    }
+
+    .total-credits {
+        text-align: left; /* Align credits text to left */
+    }
+
+    /* --- Footer Styling --- */
+    footer {
+        padding: 30px 30px; /* More padding for footer */
+        font-size: 0.9em;
+    }
+
+    .social-links {
+        justify-content: flex-start; /* Align social links to the left */
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        text-align: left; /* Align footer text to the left */
+    }
+}

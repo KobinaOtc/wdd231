@@ -1,0 +1,275 @@
+/* Color Schema Variables (from your project plan) */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #336699; /* Dark Blue */
+    --text-color: #333333; /* Dark Grey */
+    --background-color: #F8F8F8; /* Light Grey */
+    --light-accent-color: #E8F5E9; /* Lighter Green */
+    --footer-bg-color: #222; /* A dark grey for footer, as seen in inspiration */
+    --header-bg-color: #fff; /* White for header background */
+    --card-bg-color: #fff; /* White for card backgrounds */
+    --border-color: #ccc;
+    --completed-course-bg: #D4EDDA; /* Light green for completed courses */
+    --completed-course-text: #155724; /* Dark green text */
+}
+
+/* General Body and Base Styles (Mobile First) */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+/* Headings Base Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+/* --- Header Styling (Mobile) --- */
+header {
+    background-color: var(--header-bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px; /* Smaller padding for mobile */
+    position: relative; /* For absolute positioning of mobile nav */
+    z-index: 10; /* Ensure header is on top */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Space out branding and hamburger */
+    align-items: center;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.2em; /* Adjusted for mobile */
+}
+
+.site-logo {
+    height: 35px; /* Size of logo for mobile */
+    margin-right: 8px;
+}
+
+/* Hamburger Menu (visible on mobile) */
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 11; /* Above mobile nav when open */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation (hidden by default) */
+.main-nav {
+    position: absolute;
+    top: 100%; /* Below header */
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg-color); /* Same as header or different */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack nav items vertically */
+    z-index: 9; /* Below header, above main content */
+    padding: 10px 0;
+}
+
+.main-nav.active { /* Class added by JS when menu is open */
+    display: flex;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav li {
+    width: 100%;
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid #eee; /* Separator lines */
+}
+
+.main-nav a:last-child {
+    border-bottom: none;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: var(--light-accent-color);
+    color: var(--primary-color);
+}
+
+/* --- Main Content Area (Mobile) --- */
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer down */
+    width: 100%;
+    max-width: 1200px; /* Constrain max width for desktop */
+    margin: 0 auto; /* Center main content */
+    padding: 20px 15px; /* Padding for content sections */
+    box-sizing: border-box;
+}
+
+/* Common Section Styling */
+main section {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 25px; /* Space between sections */
+}
+
+main section h2 {
+    font-size: 1.5em; /* Section headings size for mobile */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* About Me Section (Mobile) */
+.about-me-section p {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.student-photo-placeholder {
+    width: 150px; /* Example size */
+    height: 150px; /* Example size */
+    background-color: #e0e0e0; /* Placeholder background */
+    border-radius: 50%; /* Circular photo */
+    margin: 0 auto; /* Center the photo */
+    overflow: hidden; /* Hide overflow if image is larger */
+}
+.student-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image fills the circle */
+}
+
+/* Courses Section (Mobile) */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #eee;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.course-cards-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    gap: 15px;
+}
+
+.course-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between; /* Course code left, something else right */
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+.course-card.completed {
+    background-color: var(--completed-course-bg); /* Light green for completed */
+    color: var(--completed-course-text); /* Darker green text */
+    border-color: var(--primary-color);
+}
+
+.total-credits {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* --- Footer Styling (Mobile) --- */
+footer {
+    background-color: var(--footer-bg-color);
+    color: #f0f0f0;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 0.85em;
+    line-height: 1.6;
+    margin-top: auto; /* Push footer to bottom */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-links img {
+    height: 30px;
+    width: 30px;
+    filter: invert(1); /* Make social icons white/light */
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    margin: 5px 0;
+}

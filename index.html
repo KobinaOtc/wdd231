@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Week 01 Assignment: Course Home Page by Kobina Otchere">
+    <meta name="author" content="Kobina Otchere">
+    <title>WDD 231 - Kobina Otchere - Course Home</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="site-branding">
+                <img src="images/logo.svg" alt="Site Logo" class="site-logo">
+                <span class="site-name">Kobina Otchere</span> </a>
+
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber Project</a></li> <li><a href="final-project/index.html">Final Project</a></li> </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <section class="about-me-section">
+            <div>
+                <h2>About Me</h2>
+                <p>
+                    A seasoned software engineer with a passion for crafting innovative solutions. I thrive in dynamic environments, leveraging a strong foundation in JavaScript, Python, and web technologies to build robust, scalable applications. 
+                    My experience in remote collaboration and agile methodologies has honed my leadership and problem-solving abilities. With a commitment to continuous learning and a global perspective, I am eager to contribute to groundbreaking 
+                    projects and foster technological advancement.
+                </p>
+            </div>
+            <div>
+                <h2>Student Photo</h2>
+                <div class="student-photo-placeholder">
+                    <img src="images/student-photo.webp" alt="Student Photo" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+            <div class="course-cards-container">
+                <p>Loading courses...</p>
+            </div>
+            <p class="total-credits">The total credits for course listed below is <span id="total-credits">0</span></p>
+        </section>
+
+        <section class="check-understanding-section">
+            <h2>Check Your Understanding</h2>
+            <p>This section can contain questions or notes related to weekly assignments.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/kobinaotc" target="_blank" aria-label="GitHub"><img src="images/icon-github.svg" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/kobina-otchere-adjoku" target="_blank" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/prodigal.otchere/" aria-label="facebook" target="_blank"><img src="images/icon-messenger.svg" alt="facebook"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Kobina Otchere • Ghana • </p> <p id="lastModified"></p> </footer>
+</body>
+</html>
