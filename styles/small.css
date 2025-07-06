@@ -15,7 +15,7 @@
 
 /* General Body and Base Styles (Mobile First) */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
@@ -28,7 +28,7 @@ body {
 
 /* Headings Base Styles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Black Ops One', sans-serif;
     color: var(--secondary-color);
     line-height: 1.2;
     margin-top: 0;
