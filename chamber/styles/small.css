@@ -1,0 +1,416 @@
+/* Color Schema (Example - Define your own for the project) */
+:root {
+    --primary-chamber-color: #5A5A5A; /* Dark grey, for text, borders */
+    --secondary-chamber-color: #8C6A3F; /* Earthy Brown/Gold, for accents, buttons */
+    --accent-light: #F8F8F8; /* Light background for sections */
+    --header-footer-bg: #E0E0E0; /* Lighter grey for header/footer */
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+/* General Body and Base Styles (Mobile First) */
+body {
+    font-family: 'Open Sans', sans-serif; /* Example font */
+    color: var(--text-dark);
+    background-color: var(--accent-light);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Example font */
+    color: var(--primary-chamber-color);
+    line-height: 1.2;
+    margin-top: 0;
+    text-align: center; /* Centered headings for mobile */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    background-color: #fff; /* White background for h1 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* --- Header Styling (Mobile) --- */
+header {
+    background-color: var(--header-footer-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Space between logo/controls and nav toggle area */
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-chamber-color);
+    font-weight: 700;
+    font-size: 1.1em; /* Adjusted for mobile */
+}
+
+.site-logo {
+    height: 30px; /* Size of logo for mobile */
+    margin-right: 8px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--primary-chamber-color); /* Color for toggle icon */
+}
+
+/* Hamburger Menu (visible on mobile) */
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 11;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-chamber-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation (hidden by default) */
+.main-nav {
+    /* Initially hidden for mobile, will be toggled by JS */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-footer-bg); /* Match header background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    padding: 10px 0;
+}
+
+.main-nav.active { /* Class added by JS when menu is open */
+    display: block; /* Show as a block */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav li {
+    width: 100%;
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid #ddd; /* Separator lines */
+}
+
+.main-nav a:last-child {
+    border-bottom: none;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: var(--secondary-chamber-color); /* Accent color on hover/active */
+    color: var(--text-light);
+}
+
+
+/* --- Main Content Area (Mobile) --- */
+main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+/* Common Section Styling */
+main section {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px; /* Space between sections */
+    border: 1px solid #ddd;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 200px; /* Mobile hero height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: var(--text-light); /* White text on hero */
+}
+
+.hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.7); /* Darken image for text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-chamber-color); /* Accent color for CTA */
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #A68D5D; /* Slightly darker accent on hover */
+}
+
+
+/* Events Section */
+.events-section h2 {
+    color: var(--primary-chamber-color); /* Dark grey for section headings */
+}
+.event-card {
+    background-color: var(--light-accent); /* Lighter accent for cards */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+.event-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: var(--secondary-chamber-color);
+}
+.event-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--text-dark);
+}
+
+/* Weather Section */
+.weather-section {
+    text-align: center;
+}
+
+.current-weather {
+    margin-bottom: 20px;
+}
+
+.current-weather .temperature {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--secondary-chamber-color);
+    margin-bottom: 5px;
+}
+.current-weather .conditions {
+    font-size: 1.1em;
+    color: var(--primary-chamber-color);
+    margin-bottom: 10px;
+}
+.current-weather p {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+    color: var(--text-dark);
+}
+
+.weather-forecast h2 {
+    color: var(--primary-chamber-color);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.weather-forecast p {
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+.weather-forecast p strong {
+    color: var(--secondary-chamber-color);
+}
+
+
+/* Business Spotlights Section */
+.business-spotlights-section h2 {
+    color: var(--primary-chamber-color);
+}
+
+.business-cards-grid {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 20px;
+}
+
+.business-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+.business-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.business-card h3 {
+    font-size: 1.2em;
+    color: var(--secondary-chamber-color);
+    margin-bottom: 5px;
+}
+
+.business-card .tagline {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.business-card p {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+.business-card p a {
+    color: var(--secondary-chamber-color);
+    text-decoration: none;
+}
+.business-card p a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Footer Styling (Mobile) --- */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--primary-chamber-color); /* Dark text on lighter footer bg */
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 0.85em;
+    line-height: 1.5;
+    margin-top: auto; /* Push footer to bottom */
+}
+
+.footer-primary-content {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center content */
+    margin-bottom: 15px;
+}
+
+.footer-address,
+.footer-social-links,
+.footer-project-info {
+    margin-bottom: 15px;
+    width: 100%; /* Take full width when stacked */
+}
+
+.footer-address p, .footer-project-info p {
+    margin: 5px 0;
+}
+
+.footer-address address {
+    font-style: normal; /* Remove italics for address */
+}
+
+.footer-address a {
+    color: var(--primary-chamber-color);
+    text-decoration: none;
+}
+.footer-address a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-social-links {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    gap: 15px;
+}
+
+.footer-social-links img {
+    height: 30px;
+    width: 30px;
+    /* You might need to adjust filter based on your icon colors */
+    /* filter: invert(1); to make dark icons white */
+    transition: transform 0.2s ease;
+}
+
+.footer-social-links img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,171 @@
+/* Larger screens (e.g., Tablets and Desktops) */
+/* This media query applies styles when the viewport is at least 768px wide */
+@media (min-width: 768px) {
+    /* --- Header Styling --- */
+    header {
+        padding: 15px 30px; /* More padding for larger screens */
+    }
+
+    .header-top {
+        margin-bottom: 0; /* Remove bottom margin for top header content */
+    }
+
+    .site-branding {
+        font-size: 1.5em; /* Larger font for site name */
+    }
+
+    .site-logo {
+        height: 45px; /* Larger logo */
+    }
+
+    /* Hide hamburger menu on larger screens */
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Show horizontal navigation for larger screens */
+    .main-nav {
+        /* Reset mobile-specific positioning */
+        position: static;
+        display: block; /* Show the nav */
+        background: none; /* No background */
+        box-shadow: none; /* No shadow */
+        padding: 0;
+        z-index: auto;
+        /* Align with header controls */
+        order: 2; /* Place nav after branding but before controls on desktop flex */
+        flex-grow: 1; /* Allow nav to take available space */
+        text-align: right; /* Align nav items to the right */
+    }
+
+    .main-nav ul {
+        display: flex; /* Arrange nav items horizontally using Flexbox */
+        justify-content: flex-end; /* Push nav items to the right */
+    }
+
+    .main-nav li {
+        width: auto; /* Allow list items to take natural width */
+        margin-left: 30px; /* Space between nav items */
+    }
+
+    .main-nav a {
+        padding: 5px 0; /* Adjust padding for horizontal links */
+        border-bottom: none; /* Remove separator lines */
+        font-weight: 600;
+        color: var(--primary-chamber-color); /* Dark grey for nav links */
+        position: relative; /* For the underline effect */
+    }
+
+    /* Underline effect for nav links */
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--secondary-chamber-color); /* Accent color for underline */
+        transition: width 0.3s ease-in-out;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+        width: 100%;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+        background-color: transparent; /* Remove background on hover/active for desktop */
+        color: var(--secondary-chamber-color); /* Change text color to accent on hover/active */
+    }
+
+    /* Adjust header-top to use flex and align items for desktop nav */
+    header .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+    header .header-controls {
+        order: 3; /* Place controls last */
+    }
+
+    /* --- Main Content Area --- */
+    main {
+        padding: 40px 30px; /* More padding for main content sections */
+    }
+
+    main section {
+        padding: 30px; /* More padding inside sections */
+    }
+
+    /* Hero Section (Desktop) */
+    .hero-section {
+        height: 400px; /* Taller hero on desktop */
+    }
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    /* Events, Weather Sections (Desktop - multi-column layout) */
+    .three-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+        gap: 20px; /* Space between columns */
+        margin-bottom: 20px; /* Space below the grid */
+    }
+
+    .events-section {
+        grid-column: 1 / 2; /* Place events in the first column */
+    }
+
+    .weather-section {
+        grid-column: 2 / 4; /* Span weather sections across two columns */
+        display: grid; /* Use grid internally for current weather & forecast */
+        grid-template-columns: 1fr 1fr; /* Two columns inside weather section */
+        gap: 20px;
+        text-align: left; /* Align weather content to left */
+    }
+    .weather-section h2 {
+        grid-column: 1 / -1; /* Make Weather heading span both columns */
+        text-align: center; /* Center heading within its span */
+    }
+    .current-weather {
+        margin-bottom: 0; /* Remove bottom margin if side-by-side */
+    }
+    .weather-forecast h2 { /* Hide second 'Weather Forecast' heading as per desktop wireframe */
+        display: none;
+    }
+
+
+    /* Business Spotlights Section (Desktop - grid for cards) */
+    .business-spotlights-section h2 {
+        text-align: center; /* Center business spotlight heading */
+    }
+    .business-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2-3 columns for business cards */
+        gap: 25px; /* Space between cards */
+    }
+
+    .business-card {
+        text-align: left; /* Ensure text is left-aligned in desktop cards */
+    }
+
+    /* --- Footer Styling --- */
+    footer {
+        padding: 30px 30px; /* More padding for footer */
+        font-size: 0.9em;
+    }
+
+    .footer-primary-content {
+        flex-direction: row; /* Arrange footer sections horizontally */
+        justify-content: space-between;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .footer-address {
+        width: auto; /* Allow width to be natural */
