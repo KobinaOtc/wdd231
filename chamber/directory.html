@@ -20,7 +20,7 @@
         <div class="header-top">
             <a href="index.html" class="site-branding">
                 <img src="images/logo.svg" alt="Accra Chamber of Commerce Logo" class="site-logo">
-                <span class="site-name">Accra Chamber of Commerce</span>
+                <span class="site-name">ACC</span>
             </a>
             <div class="header-controls">
                 <button class="theme-toggle" aria-label="Toggle dark or light mode">🌙</button>
@@ -90,32 +90,15 @@
 
         <section class="business-spotlights-section">
             <h2>Business Spotlights</h2>
-            <div class="business-cards-grid">
-                <div class="business-card">
-                    <img src="images/business-placeholder-1.webp" alt="Business 1 Logo" loading="lazy" data-src="images/business-placeholder-1.webp">
-                    <h3>Business Name 1</h3>
-                    <p class="tagline">Business Tag Line</p>
-                    <p>EMAIL: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
-                    <p>PHONE: 800-555-1234</p>
-                    <p>URL: <a href="#">mybusiness.com</a></p>
-                </div>
-                <div class="business-card">
-                    <img src="images/business-placeholder-2.webp" alt="Business 2 Logo" loading="lazy" data-src="images/business-placeholder-2.webp">
-                    <h3>Business Name 2</h3>
-                    <p class="tagline">Business Tag Line</p>
-                    <p>EMAIL: <a href="mailto:info@gmail.com">info@gmail.com">info@gmail.com</a></p>
-                    <p>PHONE: 800-555-1234</p>
-                    <p>URL: <a href="#">mybusiness.com</a></p>
-                </div>
-                <div class="business-card">
-                    <img src="images/business-placeholder-3.webp" alt="Business 3 Logo" loading="lazy" data-src="images/business-placeholder-3.webp">
-                    <h3>Business Name 3</h3>
-                    <p class="tagline">Business Tag Line</p>
-                    <p>EMAIL: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
-                    <p>PHONE: 800-555-1234</p>
-                    <p>URL: <a href="#">mybusiness.com</a></p>
-                </div>
+            <div class="view-toggle">
+                <button id="grid-view-btn" class="toggle-btn" aria-label="Show members in grid view">
+                    <img src="images/icon-grid.svg" alt="Grid View Icon"> Grid
+                </button>
+                <button id="list-view-btn" class="toggle-btn" aria-label="Show members in list view">
+                    <img src="images/icon-list.svg" alt="List View Icon"> List
+                </button>
             </div>
+            <div id="biz-list" class="business-cards-grid"></div>
         </section>
 
     </main>
