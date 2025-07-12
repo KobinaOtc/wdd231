@@ -299,6 +299,45 @@ main section {
     color: var(--secondary-chamber-color);
 }
 
+/* View Toggle Buttons */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background-color: #eee;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 20px; /* Pill shape */
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    display: flex; /* For icon + text */
+    align-items: center;
+    gap: 5px;
+}
+
+.toggle-btn img {
+    height: 18px; /* Size of toggle icons */
+    width: 18px;
+}
+
+.toggle-btn:hover {
+    background-color: var(--accent-light);
+    border-color: var(--secondary-chamber-color);
+}
+
+.toggle-btn.active {
+    background-color: var(--secondary-chamber-color); /* Accent color when active */
+    color: var(--text-light);
+    border-color: var(--secondary-chamber-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 /* Business Spotlights Section */
 .business-spotlights-section h2 {
@@ -318,6 +357,11 @@ main section {
     padding: 15px;
     text-align: left;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+.business-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .business-card img {
@@ -352,6 +396,39 @@ main section {
 }
 .business-card p a:hover {
     text-decoration: underline;
+}
+
+/* Member Card - List View specific adjustments (mobile) */
+.business-cards-list .business-card {
+    display: flex; /* Arrange content horizontally */
+    align-items: center; /* Vertically align */
+    gap: 15px;
+    text-align: left; /* Align text to left */
+    padding: 10px 15px;
+}
+.business-cards-list .business-card img {
+    max-width: 60px; /* Smaller image for list view */
+    margin: 0; /* Remove auto margin */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+.business-cards-list .business-card h3,
+.business-cards-list .business-card p {
+    text-align: left; /* Align text to left */
+    margin-bottom: 0; /* Reduce spacing in list view */
+}
+.business-cards-list .business-card h3 {
+    margin-right: auto; /* Push content to right, align name left */
+}
+.business-cards-list .business-card .contact-info {
+    font-size: 0.8em;
+    margin-left: 15px; /* Push contact info to right */
+    text-align: right; /* Align contact info right */
+}
+.business-cards-list .business-card .contact-info p {
+    margin: 0;
+}
+.business-cards-list .business-card .contact-info a {
+    display: block; /* Make links block for easier tapping */
 }
 
 
