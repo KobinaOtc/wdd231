@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    const membersJsonPath = 'http://127.0.0.1:5500/chamber/scripts/data/members.json';
+    const membersJsonPath = 'https://kobinaotc.github.io/wdd231/chamber/chamber/scripts/data/members.json';
     let chamberMembers = [];
     const memberList = document.getElementById('biz-list')
     const gridViewBtn = document.getElementById('grid-view-btn');
