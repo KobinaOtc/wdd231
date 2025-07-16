@@ -127,7 +127,7 @@
         display: grid; /* Use grid internally for current weather & forecast */
         grid-template-columns: 1fr 1fr; /* Two columns inside weather section */
         gap: 20px;
-        text-align: left; /* Align weather content to left */
+        text-align: center; /* Align weather content to left */
     }
     .weather-section h2 {
         grid-column: 1 / -1; /* Make Weather heading span both columns */
