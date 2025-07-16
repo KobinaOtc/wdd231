@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    const membersJsonPath = '/chamber/chamber/scripts/data/members.json';
+    const membersJsonPath = 'chamber/scripts/data/members.json';
     let chamberMembers = [];
     const memberList = document.getElementById('biz-list')
     const gridViewBtn = document.getElementById('grid-view-btn');
