@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function displayBusinesses(members, view) {
-        if (window.location.pathname == '/chamber/directory.html') {
+        if (window.location.pathname == '/wdd231/chamber/directory.html') {
             memberList.innerHTML = '';
             memberList.classList.remove('business-cards-grid', 'business-cards-list');
             memberList.classList.add(`business-cards-${view}`)
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        if (window.location.pathname == '/chamber/index.html' || window.location.pathname == '/chamber/') {
+        if (window.location.pathname == '/wdd231/chamber/index.html' || window.location.pathname == '/chamber/') {
             let count = 0;
             const inSpotLit = [];
             while (count < 3) {
