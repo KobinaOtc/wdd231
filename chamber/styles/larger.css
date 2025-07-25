@@ -92,7 +92,8 @@
 
     /* --- Main Content Area --- */
     main {
-        padding: 40px 30px; /* More padding for main content sections */
+        padding: 0px 30px; /* More padding for main content sections */
+        padding-bottom: 40px;
     }
 
     main section {
