@@ -33,7 +33,7 @@ h1 {
     font-size: 2em;
     margin-bottom: 20px;
     padding: 10px 0;
-    background-color: #fff; /* White background for h1 */
+    /* background-color: #fff; White background for h1 */
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
@@ -49,6 +49,10 @@ header {
     padding: 10px 15px;
     position: relative;
     z-index: 10;
+}
+
+.no-display {
+    display: none !important;
 }
 
 .header-top {
@@ -209,8 +213,8 @@ main section {
     padding: 15px;
 }
 
-.hero-content h2 {
-    font-size: 1.5em;
+.hero-content h1 {
+    font-size: 3.5em;
     color: var(--text-light);
     margin-bottom: 10px;
 }
