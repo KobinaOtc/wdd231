@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        if (window.location.pathname == '/wdd231/chamber/index.html' || window.location.pathname == '/chamber/') {
+        if (window.location.pathname == '/wdd231/chamber/index.html' || window.location.pathname == '/wdd231/chamber/') {
             let count = 0;
             const inSpotLit = [];
             while (count < 3) {
