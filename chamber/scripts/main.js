@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const membersJsonPath = 'https://kobinaotc.github.io/wdd231/chamber/scripts/data/members.json';
     let chamberMembers = [];
-    const memberList = document.getElementById('biz-list')
+    const memberList = document.getElementById('biz-list');
+    const memberSpotLit = document.getElementById('biz-sopt-lit')
     const gridViewBtn = document.getElementById('grid-view-btn');
     const listViewBtn = document.getElementById('list-view-btn');
 
@@ -45,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             chamberMembers = await response.json();
-            console.log('Members data loaded:', chamberMembers);
-            displayBusinesses(chamberMembers, getPreferredView())
+            displayBusinesses(chamberMembers, getPreferredView());
         }
         catch (error) {
             console.error('Could not fetch members data:', error);
@@ -66,22 +66,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function displayBusinesses(members, view) {
-        memberList.innerHTML = '';
-        memberList.classList.remove('business-cards-grid', 'business-cards-list');
-        memberList.classList.add(`business-cards-${view}`)
+        if (window.location.pathname == '/chamber/directory.html') {
+            memberList.innerHTML = '';
+            memberList.classList.remove('business-cards-grid', 'business-cards-list');
+            memberList.classList.add(`business-cards-${view}`)
+            members.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.classList.add('business-card');
+                memberCard.innerHTML = `
+                    <img src="images/${member.image_filename}" alt="${member.name}" loading="lazy">
+                    <h3>${member.name}</h3>
+                    <p class="tagline">${member.other_info.industry}</p>
+                    <p>PHONE: ${member.phone_number}</p>
+                    <p>URL: <a href="${member.website_url}">${member.name}</a></p>
+                `
+                memberList.appendChild(memberCard);
+            });
+        }
 
-        members.forEach(member => {
-            const memberCard = document.createElement('div');
-            memberCard.classList.add('business-card');
-            memberCard.innerHTML = `
-                <img src="images/${member.image_filename}" alt="${member.name}" loading="lazy">
-                <h3>${member.name}</h3>
-                <p class="tagline">${member.other_info.industry}</p>
-                <p>PHONE: ${member.phone_number}</p>
-                <p>URL: <a href="${member.website_url}">${member.name}</a></p>
-            `
-            memberList.appendChild(memberCard);
-        });
+        if (window.location.pathname == '/chamber/index.html' || window.location.pathname == '/chamber/') {
+            let count = 0;
+            const inSpotLit = [];
+            while (count < 3) {
+                let isIn = false;
+                let selectedMemb = members[randomIndex(members.length)];
+                if (inSpotLit.length == 0 && selectedMemb.membership_level > 1) {
+                    inSpotLit.push(selectedMemb);
+                    count++;
+                } else if (inSpotLit.length != 0 && selectedMemb.membership_level > 1) {
+                    inSpotLit.forEach(member => {
+                        if (selectedMemb.name == member.name) {
+                            isIn = true;
+                        }
+                    });
+                    if (!isIn) {
+                        inSpotLit.push(selectedMemb);
+                        count++;
+                    }
+                }
+            }
+            
+            memberSpotLit.innerHTML = '';
+            inSpotLit.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.classList.add('business-card');
+                memberCard.innerHTML = `
+                    <img src="images/${member.image_filename}" alt="${member.name}" loading="lazy">
+                    <h3>${member.name}</h3>
+                    <p class="tagline">${member.other_info.industry}</p>
+                    <p>PHONE: ${member.phone_number}</p>
+                    <p>ADDRESS: ${member.address}</p>
+                    <p>M-Level: ${genMembership(member.membership_level)}</p>
+                    <p>URL: <a href="${member.website_url}">${member.name}</a></p>
+                `
+                memberSpotLit.appendChild(memberCard);
+            })
+        }
+    }
+
+    function genMembership(level) {
+        const membershipLevels = [
+            'Copper',
+            'Bronze',
+            'Silver',
+            'Gold'
+        ]
+
+        return membershipLevels[level];
+    }
+
+    function randomIndex(arrlen) {
+        return Math.floor(Math.random() * arrlen);
     }
 
     getMembersData();

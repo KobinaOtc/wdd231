@@ -109,7 +109,6 @@ function displayResults(data, foreData) {
     const weatherData = await apiFetch();
     const forecast = await fetchFore();
     if (weatherData && forecast) {
-        console.log('Fetched weather data for display:', weatherData, forecast);
         displayResults(weatherData, forecast);
     } else {
         console.log('Failed to get weather data, skipping display.');
