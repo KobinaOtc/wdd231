@@ -103,6 +103,9 @@
     /* Hero Section (Desktop) */
     .hero-section {
         height: 400px; /* Taller hero on desktop */
+        border-radius: 0px;
+        margin-left: -2rem;
+        margin-right: -2rem;
     }
     .hero-content h2 {
         font-size: 2.5em;
