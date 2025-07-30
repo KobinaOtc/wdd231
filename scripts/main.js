@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             number: 110,
             title: 'Introduction to Web Dev',
             credits: 2,
+            certificate: 'Web & Computer Programming',
+            technology: ['HTML', 'CSS'],
+            description: 'The web and computer programming certificate builds into a bachelor’s degree in software development from BYU-Idaho and will help you gain entry-level marketable skills.',
             completed: true
         },
         {
@@ -49,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
             number: 130,
             title: 'Web Fundamentals',
             credits: 2,
+            certificate: 'Web & Computer Programming',
+            technology: ['HTML', 'CSS', 'JS'],
+            description: 'The web and computer programming certificate builds into a bachelor’s degree in software development from BYU-Idaho and will help you gain entry-level marketable skills.',
             completed: true
         },
         {
@@ -56,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
             number: 131,
             title: 'Dynamic Web Forms',
             credits: 2,
+            certificate: 'Web & Computer Programming',
+            technology: ['HTML', 'CSS', 'JS'],
+            description: 'The web and computer programming certificate builds into a bachelor’s degree in software development from BYU-Idaho and will help you gain entry-level marketable skills.',
             completed: false
         },
         {
@@ -63,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
             number: 210,
             title: 'Programming with Classes',
             credits: 3,
+            certificate: 'Web & Computer Programming',
+            technology: ['Python', 'JSON'],
+            description: 'The web and computer programming certificate builds into a bachelor’s degree in software development from BYU-Idaho and will help you gain entry-level marketable skills.',
             completed: false
         },
         {
@@ -70,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
             number: 231,
             title: 'Advanced Web Dev',
             credits: 3,
+            certificate: 'Web & Computer Programming',
+            technology: ['HTML', 'CSS', 'JS', 'JSON'],
+            description: 'The web and computer programming certificate builds into a bachelor’s degree in software development from BYU-Idaho and will help you gain entry-level marketable skills.',
             completed: false
         }
     ];
@@ -100,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>${course.title}</span>
                 <span>Credits: ${course.credits}</span>
             `;
+            card.addEventListener('click', () => {
+                displayCourseDetails(course);
+            })
             courseCardsContainer.appendChild(card);
         });
 
@@ -167,5 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
     lazyLoadImages.forEach(img => {
         imgObserver.observe(img);
     });
+
+    const courseDetails = document.getElementById('course-details');
+    function displayCourseDetails(course) {
+        courseDetails.innerHTML = '';
+        courseDetails.innerHTML = `
+            <button id="closeModal">✖️</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technolgies</strong>: ${course.technology.join(', ')}</p>
+        `;
+        courseDetails.showModal();
+
+        closeModal.addEventListener('click', () => {
+            courseDetails.close();
+        });
+    }
 
 });
