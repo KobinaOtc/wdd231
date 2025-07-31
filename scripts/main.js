@@ -204,5 +204,4 @@ document.addEventListener('DOMContentLoaded', () => {
             courseDetails.close();
         });
     }
-
 });
