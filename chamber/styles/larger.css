@@ -207,6 +207,16 @@
         margin: 0;
     }
 
+    /* join page styles (start) */
+    .login-box {
+        display: flex;
+    }
+    .right {
+        width: 50%;
+        align-self: center;
+    }
+    /* join page styles (end) */
+
     /* --- Footer Styling --- */
     footer {
         padding: 30px 30px; /* More padding for footer */
