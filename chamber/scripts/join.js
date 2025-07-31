@@ -59,8 +59,8 @@ const mLevels = [
     }
 ];
 
-// TODO: Add this to 'if' statement when uploaded to pages => window.location.pathname != '/wdd231/chamber/join.html'
-if (window.location.pathname != '/chamber/join.html') {
+// TODO: Add this to 'if' statement when uploaded to pages => window.location.pathname != '/chamber/join.html'
+if (window.location.pathname != '/wdd231/chamber/join.html') {
     // firstName=Kobina&lastName=Otchere&email=email%40email.com&phoneNumber=0245677898&organizationalTitle=Product+Manager&organizationName=Kukuwa+Fitness&membershipLevel=Bronze&description=Health+and+Fitness&signup_submit=Sign+me+up
     const firstName = joinPath.get('firstName');
     const lastName = joinPath.get('lastName');
