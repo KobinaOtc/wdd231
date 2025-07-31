@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accra Chamber of Commerce join now page - Connecting businesses and community in Accra, Ghana.">
+    <meta name="author" content="Kobina Otchere"> <title>Join Now - Accra Chamber of Commerce</title>
+
+    <meta property="og:title" content="WDD 231 - Kobina Otchere - Chamber">
+    <meta property="og:description" content="WDD 231 - Week 02 Assignment: Chamber Join Page by Kobina Otchere">
+    <meta property="og:url" content="https://kobinaotc.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://kobinaotc.github.io/wdd231/images/hero-accra.webp">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="site-branding">
+                <img src="images/logo.svg" alt="Accra Chamber of Commerce Logo" class="site-logo">
+                <span class="site-name">ACC</span>
+            </a>
+            <div class="header-controls">
+                <button class="theme-toggle" aria-label="Toggle dark or light mode">🌙</button>
+                <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form method="get" action="thanks.html" class="login-box">
+            <div class="left">
+                <h1 class="form-header">Fill And Submit The From to Join the Chamber.</h1>
+                <label>
+                    First Name
+                    <input type="text" name="firstName" />
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lastName" />
+                </label>
+                <label>
+                    Email
+                    <input type="text" name="email" />
+                </label>
+                <label>
+                    Phone Number
+                    <input type="text" name="phoneNumber" />
+                </label>
+                <label>
+                    Job Title
+                    <input type="text" name="organizationalTitle" />
+                </label>
+                <label>
+                    Organization
+                    <input type="text" name="organizationName" />
+                </label>
+                <label>
+                    M-Level
+                    <input type="text" name="membershipLevel" />
+                </label>
+                <label>
+                    Description
+                    <input type="text" name="description" />
+                </label>
+                <input class="cta-button" type="submit" name="signup_submit" value="Sign me up" />
+            </div>
+            <div class="right">
+
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-primary-content">
+            <div class="footer-address">
+                <p>Accra Chamber of Commerce</p>
+                <address>
+                    10 Rue De La Paix<br>
+                    Accra, Ghana 999
+                </address>
+                <p>Email: <a href="mailto:info@accracc.org">info@accracc.org</a></p>
+                <p>Phone: <a href="tel:2235552300">(223) 555-2300</a></p>
+            </div>
+            <div class="footer-social-links">
+                <a href="#" aria-label="YouTube"><img src="images/icon-youtube.svg" alt="YouTube"></a>
+                <a href="#" aria-label="Twitter"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+                <a href="#" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="footer-project-info">
+                <p>WDD231 Class Project</p>
+                <p>Kobina Otchere</p> <p>&copy; <span id="currentyear"></span> Accra Chamber of Commerce</p>
+                <p id="lastModified">Last Modification: 10/21/202X 22:12:35</p> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
