@@ -217,6 +217,40 @@
     }
     /* join page styles (end) */
 
+    /* Discover page styles (start) */
+    .discover-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .discover-card {
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .discover-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .discover-card img {
+        transition: filter 0.3s ease;
+    }
+
+    .discover-card:hover img {
+        filter: grayscale(80%);
+    }
+
+    /* Message for last visit, can be placed in an overlay or other sidebar area */
+    .visit-message {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    /* Discover page styles (end) */
+
     /* --- Footer Styling --- */
     footer {
         padding: 30px 30px; /* More padding for footer */
