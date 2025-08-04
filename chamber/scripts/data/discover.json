@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Kwame Nkrumah Mausoleum",
+    "address": "High St, Accra, Ghana",
+    "description": "A memorial dedicated to Ghana's first President, featuring a museum and serene gardens.",
+    "image_filename": "nkrumah-mausoleum.webp"
+  },
+  {
+    "name": "Jamestown Lighthouse",
+    "address": "Jamestown Rd, Accra, Ghana",
+    "description": "A historic lighthouse offering panoramic views of the city and fishing harbor.",
+    "image_filename": "jamestown-lighthouse.webp"
+  },
+  {
+    "name": "Makola Market",
+    "address": "Kojo Thompson Rd, Accra, Ghana",
+    "description": "A bustling open-air market known for its vibrant atmosphere and diverse goods.",
+    "image_filename": "makola-market.webp"
+  },
+  {
+    "name": "Black Star Square",
+    "address": "28th February Rd, Accra, Ghana",
+    "description": "A public square and monument dedicated to Ghanaian independence from British colonial rule.",
+    "image_filename": "black-star-square.webp"
+  },
+  {
+    "name": "Osu Castle",
+    "address": "Castle Rd, Osu, Accra, Ghana",
+    "description": "Also known as Fort Christiansborg, this historic site served as the seat of government.",
+    "image_filename": "osu-castle.webp"
+  },
+  {
+    "name": "National Museum of Ghana",
+    "address": "Barnes Rd, Accra, Ghana",
+    "description": "Showcasing Ghana's rich cultural history and heritage through artifacts and exhibitions.",
+    "image_filename": "ghana-national-museum.webp"
+  },
+  {
+    "name": "W.E.B. Du Bois Centre",
+    "address": "1 Circular Rd, Cantonments, Accra, Ghana",
+    "description": "A research and memorial center dedicated to the life of the Pan-Africanist writer and activist.",
+    "image_filename": "dubois-centre.webp"
+  },
+  {
+    "name": "Labadi Beach",
+    "address": "La Teshie Beach Rd, Accra, Ghana",
+    "description": "One of Accra's most popular beaches, offering food stalls, live music, and a lively atmosphere.",
+    "image_filename": "labadi-beach.webp"
+  }
+]
