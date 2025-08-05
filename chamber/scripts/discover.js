@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const discoverGrid = document.getElementById('discover-grid');
     const visitMessage = document.getElementById('visit-message');
-    const discoverJsonPath = 'http://127.0.0.1:5500/chamber/scripts/data/discover.json';
+    const discoverJsonPath = 'https://kobinaotc.github.io/wdd231/chamber/scripts/data/discover.json';
 
     async function getAttractionsData() {
         try {
