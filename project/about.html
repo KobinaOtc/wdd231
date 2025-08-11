@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kookofio - Features</title>
+    <meta name="description" content="Explore the key features of the Kookofio app, designed to make early speech development fun and effective for children.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Linking to external JavaScript file -->
+    <script src="scripts/main.js" type="module"></script>
+</head>
+<body>
+    <!-- Header with responsive navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kookofio Logo">
+            </a>
+            <nav class="nav-menu" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="about.html">About</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Main content for the about page -->
+    <main>
+        <section class="page-intro">
+            <div class="container">
+                <h1>Our Story & Mission</h1>
+                <p>Learn more about the team of educators and parents behind the Kookofio app.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="story-card">
+                    <img src="https://placehold.co/400x300/6A8EAE/FFFFFF?text=Team+Photo" alt="Kookofio team" class="story-image">
+                    <div class="story-text">
+                        <h2>Empowering Little Communicators</h2>
+                        <p>Kookofio was born from a simple idea: to make early speech development fun and accessible for every child. We are a small team of passionate educators, designers, and parents who believe that every child deserves the confidence to express themselves. Our mission is to provide an engaging, play-based tool that supports this vital stage of growth, transforming a challenging journey into a joyful adventure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="resources-section">
+            <div class="container">
+                <h2>Educational Resources</h2>
+                <p>Explore articles and insights from our team on childhood speech development.</p>
+                <div id="resources-grid" class="resources-grid">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Have a question or just want to say hello? We'd love to hear from you!</p>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit" class="btn-download">Send Message</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </section>
+
+        <!-- The Modal Structure -->
+        <div id="resource-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <a id="modal-link" href="#" target="_blank">Read Full Article</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer: Consistent navigation and links -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="features.html">Features</a>
+                <a href="about.html">About</a>
+                <a href="#attributions">Attributions</a>
+            </div>
+            <div class="social-links">
+                <a href="#">🍎</a>
+                <a href="#">▶️</a>
+                <a href="#">👍</a>
+                <a href="#">📷</a>
+            </div>
+            <p>&copy; 2025 Kookofio. All rights reserved.</p>
+            <p><a href="#" style="color:var(--accent-color); text-decoration:none;">Watch Video Demonstration</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

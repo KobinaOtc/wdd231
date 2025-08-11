@@ -16,4 +16,27 @@
     .benefits-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .feature-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .feature-card:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+    .story-card {
+        flex-direction: row;
+        text-align: left;
+    }
+    .story-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .resources-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
