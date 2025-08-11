@@ -1,0 +1,205 @@
+:root {
+    --primary-bg: #F0F4F8; /* Light Blue/Gray */
+    --content-bg: #FFFFFF; /* White */
+    --headings-color: #2C3E50; /* Dark Blue/Gray */
+    --accent-color: #FFC107; /* Bright Yellow */
+    --muted-blue: #6A8EAE; /* Muted Blue */
+    --font-main: 'Inter', sans-serif;
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    background-color: var(--primary-bg);
+    color: #555;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--headings-color);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+/* Header and Navigation */
+.site-header {
+    background-color: var(--content-bg);
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 8px; /* Rounded corners for the logo image */
+}
+
+.nav-menu {
+    display: none; /* Hidden by default on mobile */
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: var(--content-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--headings-color);
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-toggle {
+    display: block; /* Hamburger menu for mobile */
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--headings-color);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--muted-blue);
+    color: var(--content-bg);
+    min-height: 70vh;
+    display: flex;
+}
+
+.hero-section .container {
+    align-self: center;
+}
+
+.hero-section h1 {
+    color: var(--content-bg);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-download {
+    background-color: var(--accent-color);
+    color: var(--headings-color);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 15px 30px;
+    border-radius: 50px; /* Pill shape for CTA */
+    transition: transform 0.2s;
+}
+
+.btn-download:hover {
+    transform: scale(1.05);
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background-color: var(--content-bg);
+    padding: 30px;
+    border-radius: 15px; /* Softer, child-friendly corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card .icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--muted-blue);
+    color: var(--content-bg);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.testimonial-card .author {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--headings-color);
+    color: var(--primary-bg);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--primary-bg);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+}
+
+.social-links a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--accent-color);
+}
