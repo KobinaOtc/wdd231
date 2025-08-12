@@ -88,7 +88,10 @@ h1, h2, h3 {
 .hero-section {
     text-align: center;
     padding: 80px 20px;
-    background-color: var(--muted-blue);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-img.webp');
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
     color: var(--content-bg);
     min-height: 70vh;
     display: flex;
@@ -114,7 +117,7 @@ h1, h2, h3 {
     color: var(--headings-color);
     text-decoration: none;
     font-weight: 800;
-    padding: 15px 30px;
+    padding: 7px 30px;
     border-radius: 50px; /* Pill shape for CTA */
     transition: transform 0.2s;
 }
@@ -146,6 +149,10 @@ h1, h2, h3 {
 
 .benefit-card:hover {
     transform: translateY(-5px);
+}
+
+.icon img {
+    max-width: 4em;
 }
 
 .benefit-card .icon {

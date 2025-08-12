@@ -2,14 +2,6 @@ import { setupNavToggle } from './modules/nav.mjs';
 import { loadResources, setupModal } from './modules/about.mjs';
 import { setupContactForm } from './modules/form.mjs';
 
-// JavaScript for the responsive navigation toggle
-const navToggle = document.getElementById('nav-toggle');
-const mainNav = document.getElementById('main-nav');
-
-navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('active');
-});
-
 window.addEventListener('DOMContentLoaded', () => {
     // Shared functionality for all pages
     setupNavToggle();
