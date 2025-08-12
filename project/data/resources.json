@@ -1,0 +1,46 @@
+{
+    "resources": [
+        {
+            "title": "Milestones in Early Speech Development",
+            "short_description": "A guide for parents on what to expect at different ages.",
+            "description": "This article provides a detailed breakdown of key speech and language milestones from birth to age five. It includes tips on how to support your child's communication skills at each stage and when to consider seeking professional help.",
+            "link": "https://www.example.com/milestones",
+            "tags": ["milestones", "parents", "development"]
+        },
+        {
+            "title": "Fun Activities to Boost Vocabulary",
+            "short_description": "Simple games and exercises you can do at home.",
+            "description": "Discover fun and easy activities to incorporate into your daily routine to help your child expand their vocabulary. From singing songs to storytelling, these methods are proven to be effective and engaging.",
+            "link": "https://www.example.com/activities",
+            "tags": ["activities", "vocabulary", "games"]
+        },
+        {
+            "title": "Understanding the Role of Play in Learning",
+            "short_description": "Why playing is so crucial for cognitive growth.",
+            "description": "Learn about the scientific research and expert opinions that highlight the importance of play-based learning for children. This article explains how play naturally fosters curiosity, problem-solving, and, most importantly, communication skills.",
+            "link": "https://www.example.com/play",
+            "tags": ["play-based learning", "cognitive growth"]
+        },
+        {
+            "title": "The Power of Reading Aloud to Your Child",
+            "short_description": "Tips for making story time a valuable learning experience.",
+            "description": "Reading aloud is one of the most effective ways to promote language development. This article offers practical tips and techniques to make story time more interactive, engaging, and beneficial for your child's speech skills.",
+            "link": "https://www.example.com/reading",
+            "tags": ["reading", "language development", "story time"]
+        },
+        {
+            "title": "Navigating Speech Delays and Concerns",
+            "short_description": "Expert advice on when to be concerned and what steps to take.",
+            "description": "If you have concerns about your child's speech, this guide provides a supportive overview of common signs of speech delays, offers guidance on how to speak with your pediatrician, and outlines resources for further evaluation.",
+            "link": "https://www.example.com/delays",
+            "tags": ["speech delays", "concerns", "pediatrician"]
+        },
+        {
+            "title": "How Kookofio Aligns with Educational Standards",
+            "short_description": "A look at the principles behind our app's curriculum.",
+            "description": "This resource explains how the Kookofio app's content and activities are designed based on established early childhood education standards, ensuring a high-quality and effective learning experience.",
+            "link": "https://www.example.com/standards",
+            "tags": ["curriculum", "educational standards"]
+        }
+    ]
+}
