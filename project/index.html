@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 
     <!-- Linking to external JS file -->
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" type="module"></script>
 </head>
 <body>
     <!-- Header with responsive navigation -->
@@ -30,7 +30,7 @@
                 <img src="images/logo.png" alt="Kookofio Logo">
             </a>
             <nav class="nav-menu" id="main-nav">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
                 <a href="features.html">Features</a>
                 <a href="about.html">About</a>
             </nav>
@@ -55,17 +55,23 @@
                 <h2>Why Parents & Educators Love Kookofio</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <span class="icon">🎨</span>
+                        <span class="icon">
+                            <img src="images/parrot-playful.png" alt="kookofio playful parrot">
+                        </span>
                         <h3>Learning Through Play</h3>
                         <p>Our app uses fun, interactive games and colorful animations to make learning sounds and words an exciting adventure.</p>
                     </div>
                     <div class="benefit-card">
-                        <span class="icon">🧠</span>
+                        <span class="icon">
+                            <img src="images/parrot-idea.png" alt="kookofio playful parrot">
+                        </span>
                         <h3>Expert-Backed Content</h3>
                         <p>Developed with the guidance of speech therapists and educators to ensure every activity is effective and purposeful.</p>
                     </div>
                     <div class="benefit-card">
-                        <span class="icon">📈</span>
+                        <span class="icon">
+                            <img src="images/parrot-graph.png" alt="kookofio playful parrot">
+                        </span>
                         <h3>Track Your Child's Progress</h3>
                         <p>Built-in tools allow you to monitor your child's milestones and celebrate every new achievement together.</p>
                     </div>
