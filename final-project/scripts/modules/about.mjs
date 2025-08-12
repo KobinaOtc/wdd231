@@ -3,7 +3,7 @@ export async function loadResources() {
     if (!resourcesGrid) return;
 
     try {
-        const response = await fetch('http://127.0.0.1:5500/project/data/resources.json');
+        const response = await fetch('https://kobinaotc.github.io/wdd231/final-project/data/resources.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
